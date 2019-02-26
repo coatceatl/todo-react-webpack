@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Todos from './Todos.jsx';
 
 class App extends Component {
 
@@ -6,6 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>React ToDo App</h1>
+        <Todos />
       </div>
     );
   }
