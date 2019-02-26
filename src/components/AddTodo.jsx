@@ -19,7 +19,7 @@ class AddTodo extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
+    console.log(this.state.content);
   }
 
   render() {
@@ -29,7 +29,6 @@ class AddTodo extends Component {
           <label>Add new todo:</label>
           <input type="text"
             onChange = {this.handleChange}
-            value = {this.state.value}
           />
         </form>
       </div>
