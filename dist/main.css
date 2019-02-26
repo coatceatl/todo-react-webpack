@@ -6,7 +6,10 @@ body {
   padding: 35px;
   color: #fff;
   font-size: 46px;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .todo-content {
   max-width: 1200px;
@@ -17,6 +20,21 @@ body {
   font-size: 16px;
   border: 1px solid #464bf5;
   margin-bottom: 15px; }
+
+form {
+  display: flex;
+  flex-direction: column; }
+
+label {
+  color: gray;
+  margin-bottom: 15px; }
+
+input {
+  border: none;
+  border-bottom: 1px solid #464bf5; }
+
+input:focus {
+  outline: none; }
 
 @media (max-width: 1200px) {
   .todo-content {
