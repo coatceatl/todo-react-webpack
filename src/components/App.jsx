@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todos from './Todos.jsx';
+import AddTodo from './AddTodo.jsx';
 
 class App extends Component {
 
@@ -18,6 +19,7 @@ class App extends Component {
       <div className="wrap">
         <div className="header">React ToDo App</div>
         <Todos todos={this.state.todos} />
+        <AddTodo />
       </div>
     );
   }

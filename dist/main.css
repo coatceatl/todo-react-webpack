@@ -1,1 +1,27 @@
+body {
+  margin: 0; }
+
+.header {
+  background-color: #464bf5;
+  padding: 35px;
+  color: #fff;
+  font-size: 46px;
+  text-align: center; }
+
+.todo-content {
+  max-width: 1200px;
+  margin: 30px auto; }
+
+.todo-list {
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #464bf5;
+  margin-bottom: 15px; }
+
+@media (max-width: 1200px) {
+  .todo-content {
+    margin-left: 20px;
+    margin-right: 20px; }
+  .header {
+    font-size: 30px; } }
 
