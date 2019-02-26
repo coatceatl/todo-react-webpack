@@ -1,14 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Todos extends Component {
+const Todos = ({todos}) => {
 
-  render() {
+  const todoList = todos.length ? (
+    todos.map(todo => {
+      return (
+        <div key={todo.id}>
+          <span>{todo.content}</span>
+        </div>
+      )
+    })
+  ) : (
+    <p>You haven't todos</p>
+  )
+
     return (
       <div>
-        <h1>Component Todos</h1>
+        {todoList}
       </div>
     );
-  }
 }
 
 export default Todos
