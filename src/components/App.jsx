@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Todos from './Todos.jsx';
 import AddTodo from './AddTodo.jsx';
 
+window.id = 0;
+
 class App extends Component {
 
   constructor(props) {
@@ -14,12 +16,17 @@ class App extends Component {
     }
   }
 
+  addTodo(todo) {
+    const current = {id: window.id++, content: todo}
+    console.log(current)
+  }
+
   render() {
     return (
       <div className="wrap">
         <div className="header">React ToDo App</div>
         <Todos todos={this.state.todos} />
-        <AddTodo />
+        <AddTodo addTodo={this.addTodo} />
       </div>
     );
   }
