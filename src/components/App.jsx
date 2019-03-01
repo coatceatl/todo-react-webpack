@@ -5,7 +5,6 @@ import AddTodo from './AddTodo.jsx';
 window.id = 0;
 
 class App extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -14,11 +13,15 @@ class App extends Component {
         {id: 2, content: 'second todo'}
       ]
     }
+
+    this.addTodo = this.addTodo.bind(this);
+
   }
 
   addTodo(todo) {
     const current = {id: window.id++, content: todo}
-    console.log(current)
+    let todos = [...this.state.todos, current];
+    console.log(todos);
   }
 
   render() {
