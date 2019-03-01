@@ -9,26 +9,31 @@ class App extends Component {
     super(props);
     this.state = {
       todos: [
-        {id: 1, content: 'first todo'},
-        {id: 2, content: 'second todo'}
+        {id: 1, content: 'First todo'},
+        {id: 2, content: 'Second todo'}
       ]
     }
 
     this.addTodo = this.addTodo.bind(this);
+    this.deleteTodo = this.deleteTodo.bind(this);
 
   }
 
   addTodo(todo) {
     const current = {id: window.id++, content: todo}
     let todos = [...this.state.todos, current];
-    console.log(todos);
     this.setState({
       todos
     })
   }
 
   deleteTodo(id) {
-    console.log(id);
+    const todos = this.state.todos.filter(todo => {
+      return todo.id !== id
+    });
+    this.setState({
+      todos
+    })
   }
 
   render() {
