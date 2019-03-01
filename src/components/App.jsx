@@ -21,16 +21,21 @@ class App extends Component {
   addTodo(todo) {
     const current = {id: window.id++, content: todo}
     let todos = [...this.state.todos, current];
+    console.log(todos);
     this.setState({
       todos
     })
+  }
+
+  deleteTodo(id) {
+    console.log(id);
   }
 
   render() {
     return (
       <div className="wrap">
         <div className="header">React ToDo App</div>
-        <Todos todos={this.state.todos} />
+        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
         <AddTodo addTodo={this.addTodo} />
       </div>
     );
