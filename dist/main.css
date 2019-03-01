@@ -36,6 +36,21 @@ input {
 input:focus {
   outline: none; }
 
+.footer {
+  background-color: #464bf5;
+  padding: 35px 0;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
 @media (max-width: 1200px) {
   .todo-content {
     margin-left: 20px;

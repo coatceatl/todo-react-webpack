@@ -42,6 +42,7 @@ class App extends Component {
         <div className="header">React ToDo App</div>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
         <AddTodo addTodo={this.addTodo} />
+        <div className="footer">Copyright © 2019 - coatceatl</div>
       </div>
     );
   }
