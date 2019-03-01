@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Todos from './Todos.jsx';
 import AddTodo from './AddTodo.jsx';
 
-window.id = 0;
+window.id = 3;
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +21,6 @@ class App extends Component {
   addTodo(todo) {
     const current = {id: window.id++, content: todo}
     let todos = [...this.state.todos, current];
-    console.log(todos);
     this.setState({
       todos
     })
