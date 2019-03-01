@@ -22,6 +22,9 @@ class App extends Component {
     const current = {id: window.id++, content: todo}
     let todos = [...this.state.todos, current];
     console.log(todos);
+    this.setState({
+      todos
+    })
   }
 
   render() {
